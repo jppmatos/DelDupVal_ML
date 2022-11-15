@@ -12,6 +12,22 @@ sh RUN_validate_DUPS-DGRC0005.sh
 ```
 ./output/...
 ```
+## Input:
+. The input has to be a csv file the CNVs, each CNVs has to have their mapping infomation such as start and end position in basepairs of the CNV it self and the flanking regions made by the improper read pairs:
+```
+Case_id;ID;Cluster_id;start_position_max;end_position_max;regionA_stat;regionA_end;regionB_stat;regionB_end;chr_A;chr_B;libraries;A_size;B_size
+0;DGRC0005;fp_del_56;56;4064277;4069587;4062862;4064277;4069587;4071328;1;1;liGS;1415;1741
+1;DGRC0005;fp_del_126;126;7630994;7636797;7629784;7630994;7636797;7637618;1;1;liGS;1210;821
+
+```
+## Output:
+. The output will be a csv file with the CNV id and the classification result as True or False:
+```
+CNV_ID;predicted_CNV
+0;DGRC0005_dup_1;True
+1;DGRC0005_dup_2;False
+
+```
 
 ## Example:
 . Start with RUN_validate_DELS-DGRC0005_SAMPLE.sh for deletions or RUN_validate_DUPS-DGRC0005_SAMPLE.sh for duplications.
