@@ -55,3 +55,12 @@ sh RUN_validate_DELS-DGRC0005.sh
 5. Then after having the complete dataset (**dataset.csv**), **preditClassify.py** will classify the CNVs as possible True CNV or False CNV. The classification script need to know if the CNVs are deletions (DEL) or duplication (DUPS);
 6. A *.csv* report is made at the defined output path in **output_path_TP_4** named as **DEL_prediction_results** (deletions) or **DUP_prediction_results.csv** (duplications).
   
+ ### Requirements:
+ - Linux operative system
+ - python  3.9.7
+   - auto-sklearn==0.13.0 
+   - numpy==1.22.3
+   - pyfaidx==0.5.9.5
+   - scikit-learn==1.0.2
+   - pandas=1.1.3
+ 
