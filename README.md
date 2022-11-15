@@ -10,18 +10,15 @@ Figure 1: Representation of a (A) Deletion and a (B) Tandem Duplication with the
 The CNVs used for the model's training were reads mapped with large-insert genomic sequencing (liGS) libraries. 
 
 
-### How to run it
+## How to run it
 1. Start with RUN_validate_DUPS-DGRC0005.sh for duplications.
 2. ...
 3. ...
 ```
 sh RUN_validate_DUPS-DGRC0005.sh
 ```
-4. the output will be avaliable as:
-```
-./output/...
-```
-## Input:
+
+### Input:
 . The input has to be a csv file the CNVs, each CNVs has to have their mapping infomation such as start and end position in basepairs of the CNV it self and the flanking regions made by the improper read pairs:
 ```
 Case_id;ID;Cluster_id;start_position_max;end_position_max;regionA_stat;regionA_end;regionB_stat;regionB_end;chr_A;chr_B;libraries;A_size;B_size
@@ -29,7 +26,7 @@ Case_id;ID;Cluster_id;start_position_max;end_position_max;regionA_stat;regionA_e
 1;DGRC0005;fp_del_126;126;7630994;7636797;7629784;7630994;7636797;7637618;1;1;liGS;1210;821
 
 ```
-## Output:
+### Output:
 . The output will be a csv file with the CNV id and the classification result as True or False:
 ```
 CNV_ID;predicted_CNV
