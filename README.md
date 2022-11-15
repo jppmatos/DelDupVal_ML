@@ -1,5 +1,14 @@
 # DDval_ML
-A ML tool for validation of pos-mapping CNVs.
+DDval_ML is a ML tool for validation of pos-mapping deletion and duplications copy number variations (CNVs). It takes use of clusters of identified improper read-pairs to define a flanking region of the CNV it self (Figure 1), then genomic information is overlaped against the flacking regions of it is provided enough information to chracterize the CNV. 
+
+![image](https://user-images.githubusercontent.com/44948470/201972334-130a94aa-25a1-41cb-b4fc-18ff0cb761c8.png)
+![image](https://user-images.githubusercontent.com/44948470/201972350-422dce3d-42d7-4fc3-96f1-1c73b04da057.png)
+
+Figure 1: Representation of a (A) Deletion and a (B) Tandem Duplication with their respectively flanking regions. Improper pairs are depicted as green arrows connected by a dashed line. X’ and Y’ represent the CNV’s breakpoints and X and Y mark the limits of the improper pair cluster.
+
+
+The CNVs used for the model's training were reads mapped with large-insert genomic sequencing (liGS) libraries. 
+
 
 ### How to run it
 1. Start with RUN_validate_DUPS-DGRC0005.sh for duplications.
