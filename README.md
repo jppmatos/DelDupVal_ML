@@ -12,7 +12,7 @@ The CNVs used for the model's training were reads mapped with large-insert genom
 
 ## How to run it
 1. Download DDval_ML repository
-2. Download the [subdatasets](https://www.dropbox.com/s/lvbga9cnay5dwq5/dataset3.zip?dl=0)
+2. Download the [subdatasets](https://www.dropbox.com/s/lvbga9cnay5dwq5/dataset3.zip?dl=0) data
 3. Uncompress the dataset3.zip file, it has to be in the same diretory within the repository
 4. Select the bash script for the designed task, RUN_validate_DELS-DGRC0005.sh for deletions or RUN_validate_DUPS-DGRC0005.sh for duplications;
 5. Modify the selected bash script by inserting the input and output path;
@@ -53,7 +53,7 @@ mkdir ./DGRC0005_sampled/output/
 mkdir ./DGRC0005_sampled/output/deletions/
 output_path_TP_4=./DGRC0005_sampled/output/deletions/
 ```
-5. Several python scripts will process a series of sub-datasets by matching genomic data ver the given CNVs. These are: 
+5. Several python scripts will process a series of sub-datasets by matching genomic data (present in *./dataset3* folder) to the given CNVs. These are: 
 	 - **look_repRegions2.py**
 	 - **look_segDuplications2.py**
 	 - **segDuplication_coverage.py**
@@ -67,7 +67,7 @@ output_path_TP_4=./DGRC0005_sampled/output/deletions/
 	 - **Lamina_Associ_Dom.py**
 	 - **CpG_island2.py**
 	 - **TADs2.py**
-6. All the sub-datasets, present in *./dataset3* folder, will be merged and processed by **makedataset-deletions.py** (if deletions, or **makedatase.py** if duplications);
+6. All the sub-datasets will be merged and processed by **makedataset-deletions.py** (if deletions, or **makedatase.py** if duplications);
 7. Then after having the complete dataset (**dataset.csv**), **preditClassify.py** will classify the CNVs as possible True CNV or False CNV. The classification script need to know if the CNVs are deletions (DEL) or duplication (DUPS);
 8. A *.csv* report is made at the defined output path in **output_path_TP_4** named as **DEL_prediction_results** (deletions) or **DUP_prediction_results.csv** (duplications).
   
