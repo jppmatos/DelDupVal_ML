@@ -79,4 +79,13 @@ output_path_TP_4=./DGRC0005_sampled/output/deletions/
    - pyfaidx (>=0.5.9.5)
    - scikit-learn (>=1.0.2)
    - pandas (>=1.1.3)
- 
+
+---
+
+## Adicional Notes:
+Most of the genomic data used as features for the dataset came from [Genome Browser](https://genome.ucsc.edu/). Nearly all data add to be previouslly processed by script in *auxiliar_scripts* folder before being process by the script for that match the genomic data the CNVs. Just the script of **SeqComplexity.py**, **Lamina_Associ_Dom.py** and **CpG_island2.py** use directly the extrated raw data. While the other ones had to use auxliliar scripts:
+- **look_repRegions2.py**, **look_segDuplications2.py** ,**segDuplication_coverage.py** and **segDUPS_find_pair2.py** uses the **adaptData_repRegions.py**
+- Centromeres and Telomeres raw data had processed by only keeping the row that where *P11.1* and *q11* (centromeres), and *telomere* in the *type* column  (**Centro_Telo_match2.py**) 
+- Recombination Rate's raw data had been process from the hg19 format to hg38 by the [LiftOver](https://genome.ucsc.edu/cgi-bin/hgLiftOver) software (**Recombination_Rate2.py**)
+- Gene raw data came from [Ensembl](https://www.ensembl.org/index.html), process by **extrat_genes_data.sh** and **Genes_data_processing.py** (**Genes_V3.py**)
+- TAD's raw data where from IMR90_Rao_2014's data (**TADs2.py**)
