@@ -40,7 +40,7 @@ The models were trained with CNVs that were previously identified through improp
 2. Download the [subdatasets](https://www.dropbox.com/s/lvbga9cnay5dwq5/dataset3.zip?dl=0) data
 3. Uncompress the dataset3.zip file, it has to be in the same diretory within the repository
 4. Select the bash script for the designed task, RUN_validate_DELS.sh for deletions or RUN_validate_DUPS.sh for duplications;
-5. Run the selected bash script by inserting the input and output path;
+5. Run the selected bash script by inserting the input file and output path;
 6. At the output directory there'll be a cvs report file with the classification results, **DEL_prediction_results** (deletions) or **DUP_prediction_results.csv** (duplications).
 
 
