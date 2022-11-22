@@ -51,8 +51,8 @@ sh RUN_validate_DELS.sh <input_file> <output_path>
 . The input has to be a csv file the CNVs, each CNVs has to have their mapping infomation such as start and end position in basepairs of the CNV it self and the flanking regions made by the improper read pairs. The CNV's position *start_position_max* and *end_position_max* correspond to *regionA_end* and *regionB_stat* in case of deletions, *regionA_stat* and *regionB_end* in case of duplications. All columns of region position and size are in base paris.
 ```
 Case_id;ID;Cluster_id;start_position_max;end_position_max;regionA_stat;regionA_end;regionB_stat;regionB_end;chr_A;chr_B;libraries;A_size;B_size
-1;case_01;DEL_TP_01;null;1092351;1095174;1089917;1092351;1095174;1097820;2;2;liGS;2434;2646
-2;case_01;DEL_FP_01;null;6649534;6651327;6645792;6649534;6651327;6655100;4;4;liGS;3742;3773
+0;case_01;DEL_TP_01;null;1092351;1095174;1089917;1092351;1095174;1097820;2;2;liGS;2434;2646
+1;case_01;DEL_FP_01;null;6649534;6651327;6645792;6649534;6651327;6655100;4;4;liGS;3742;3773
 ```
 
 ### Output:
