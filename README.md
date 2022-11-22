@@ -39,10 +39,9 @@ The models were trained with CNVs that were previously identified through improp
 1. Download DDval_ML repository
 2. Download the [subdatasets](https://www.dropbox.com/s/lvbga9cnay5dwq5/dataset3.zip?dl=0) data
 3. Uncompress the dataset3.zip file, it has to be in the same diretory within the repository
-4. Select the bash script for the designed task, RUN_validate_DELS-DGRC0005.sh for deletions or RUN_validate_DUPS-DGRC0005.sh for duplications;
-5. Modify the selected bash script by inserting the input and output path;
-6. Run the bash script;
-7. At the output directory there'll be a cvs report file with the classification results, **DEL_prediction_results** (deletions) or **DUP_prediction_results.csv** (duplications).
+4. Select the bash script for the designed task, RUN_validate_DELS.sh for deletions or RUN_validate_DUPS.sh for duplications;
+5. Run the selected bash script by inserting the input and output path;
+6. At the output directory there'll be a cvs report file with the classification results, **DEL_prediction_results** (deletions) or **DUP_prediction_results.csv** (duplications).
 
 
 ### Input:
@@ -63,22 +62,13 @@ CNV_ID;predicted_CNV
 ```
 
 ## Example:
-. Edit and run RUN_validate_DELS-DGRC0005_SAMPLE.sh for deletions or RUN_validate_DUPS-DGRC0005_SAMPLE.sh for duplications.
+. Run RUN_validate_DELS.sh for deletions or RUN_validate_DUPS-DGRC0005.sh for duplications.
 ```
-sh RUN_validate_DELS-DGRC0005.sh 
+sh RUN_validate_DELS.sh <input_file> <output_path>
 ```
 ### How the script works:
-1. The variable **input_TP_4** it's the input were the CNV are inserted;
-```bash
-input_TP_4=./DGRC0005_sampled/DGRC0005_dels_SAMPLE.csv
-```
-3. **output_path_TP_4** variable is the defined output, were the results and other content will be avaliable;
-```bash
-mkdir ./DGRC0005_sampled/output/
-mkdir ./DGRC0005_sampled/output/deletions/
-output_path_TP_4=./DGRC0005_sampled/output/deletions/
-```
-5. Several python scripts will process a series of sub-datasets by matching genomic data (present in *./dataset3* folder) to the given CNVs. These are: 
+1. The variables **input_TP_4** and **output_path_TP_4** are the input and output variables, at the output there'll be created a folder with all output content.
+2. Several python scripts will process a series of sub-datasets by matching genomic data (present in *./dataset3* folder) to the given CNVs. These are: 
 	 - **look_repRegions2.py**
 	 - **look_segDuplications2.py**
 	 - **segDuplication_coverage.py**
@@ -92,9 +82,8 @@ output_path_TP_4=./DGRC0005_sampled/output/deletions/
 	 - **Lamina_Associ_Dom.py**
 	 - **CpG_island2.py**
 	 - **TADs2.py**
-6. All the sub-datasets will be merged and processed by **makedataset-deletions.py** (if deletions, or **makedatase.py** if duplications);
-7. Then after having the complete dataset (**dataset.csv**), **preditClassify.py** will classify the CNVs as possible True CNV or False CNV. The classification script need to know if the CNVs are deletions (DEL) or duplication (DUPS);
-8. A *.csv* report is made at the defined output path in **output_path_TP_4** named as **DEL_prediction_results** (deletions) or **DUP_prediction_results.csv** (duplications).
+3. All the sub-datasets will be merged and processed by **makedataset-deletions.py** (if deletions, or **makedatase.py** if duplications);4. Then after having the complete dataset (**dataset.csv**), **preditClassify.py** will classify the CNVs as possible True CNV or False CNV. The classification script need to know if the CNVs are deletions (DEL) or duplication (DUPS);
+5. A *.csv* report is made at the defined output path in **output_path_TP_4** named as **DEL_prediction_results** (deletions) or **DUP_prediction_results.csv** (duplications).
   
  ## Requirements:
  - Linux operative system
