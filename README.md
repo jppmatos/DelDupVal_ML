@@ -9,7 +9,7 @@ DDval_ML makes use of clusters of identified improper read-pairs to define a fla
 
 Figure 1: Representation of a (A) Deletion and a (B) Tandem Duplication with their respectively flanking regions. Improper pairs are depicted as green arrows connected by a dashed line. X’ and Y’ represent the CNV’s breakpoints and X and Y mark the limits of the improper pair cluster.
 
-To characterize the genomic regions X and Y, genomic annotation data based on a set of genomic parameters according to *Li et al., 2020* was retrieved for those regions and organized into a dataset as features:
+To characterize the genomic regions X and Y (these refered as regions A and B in the entire code), genomic annotation data based on a set of genomic parameters according to *Li et al., 2020* was retrieved for those regions and organized into a dataset as features:
 1. **Regions Size**: Regions X and Y size, calculated as log10(Mb of distance +1).
 2. **Repetitive Regions** (look_repRegions2.py; repRegions_coverage.py): Repetitive Regions (RRegions) are near-identical sequences of variable length which are prone to sequence recombination, being possible hotspots of genomic rearrangements. The existence of these  similar segments may well lead to genomic mismaps (Dunn & Anderson, 2019).
 The distance between regions X/Y and RRegions was calculated as log10(Mb of distance +1), where the value 0 was given when overlap was detected. In case of overlap, the percentage of the X/Y regions covered by RRegions was included. Also, name, family and class of RRegions was included on the dataset. Data was obtained from [genome browser’s RepeatMasker UCSC genome browser track](http://genome-euro.ucsc.edu/cgi-bin/hgTrackUi?hgsid=258916625_zlDCrzMw0jagpUpAa8G5uTCgOjX4&c=chrY&g=joinedRmsk).
