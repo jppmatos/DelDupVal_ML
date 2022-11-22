@@ -40,31 +40,38 @@ The models were trained with CNVs that were previously identified through improp
 2. Download the [subdatasets](https://www.dropbox.com/s/lvbga9cnay5dwq5/dataset3.zip?dl=0) data
 3. Uncompress the dataset3.zip file, it has to be in the same diretory within the repository
 4. Select the bash script for the designed task, RUN_validate_DELS.sh for deletions or RUN_validate_DUPS.sh for duplications;
+```
+sh RUN_validate_DELS.sh <input_file> <output_path>
+```
 5. Run the selected bash script by inserting the input file and output path;
 6. At the output directory there'll be a cvs report file with the classification results, **DEL_prediction_results** (deletions) or **DUP_prediction_results.csv** (duplications).
 
 
 ### Input:
-. The input has to be a csv file the CNVs, each CNVs has to have their mapping infomation such as start and end position in basepairs of the CNV it self and the flanking regions made by the improper read pairs:
+. The input has to be a csv file the CNVs, each CNVs has to have their mapping infomation such as start and end position in basepairs of the CNV it self and the flanking regions made by the improper read pairs. The CNV's position *start_position_max* and *end_position_max* correspond to *regionA_end* and *regionB_stat* in case of deletions, *regionA_stat* and *regionB_end* in case of duplications. All columns of region position and size are in base paris.
 ```
 Case_id;ID;Cluster_id;start_position_max;end_position_max;regionA_stat;regionA_end;regionB_stat;regionB_end;chr_A;chr_B;libraries;A_size;B_size
-0;DGRC0005;fp_del_56;56;4064277;4069587;4062862;4064277;4069587;4071328;1;1;liGS;1415;1741
-1;DGRC0005;fp_del_126;126;7630994;7636797;7629784;7630994;7636797;7637618;1;1;liGS;1210;821
-
+1;case_01;DEL_TP_01;null;1092351;1095174;1089917;1092351;1095174;1097820;2;2;liGS;2434;2646
+2;case_01;DEL_FP_01;null;6649534;6651327;6645792;6649534;6651327;6655100;4;4;liGS;3742;3773
 ```
+
 ### Output:
 . The output will be a csv file with the CNV id and the classification result as True or False:
 ```
 CNV_ID;predicted_CNV
-0;DGRC0005_dup_1;True
-1;DGRC0005_dup_2;False
+0;DEL_TP_01;True
+1;DEL_FP_01;False
 
 ```
 
 ## Example:
 . Run RUN_validate_DELS.sh for deletions or RUN_validate_DUPS-DGRC0005.sh for duplications.
 ```
-sh RUN_validate_DELS.sh <input_file> <output_path>
+#Deletions:
+sh RUN_validate_DELS.sh ./test_sample/deletions_SAMPLE.csv ./test_sample/
+
+#Duplications:
+sh RUN_validate_DUPS.sh ./test_sample/duplications_SAMPLE.csv ./test_sample/
 ```
 ### How the script works:
 1. The variables **input_TP_4** and **output_path_TP_4** are the input and output variables, at the output there'll be created a folder with all output content.
