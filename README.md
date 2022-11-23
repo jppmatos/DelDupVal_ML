@@ -102,7 +102,7 @@ Most of the genomic data used as features for the dataset came from [Genome Brow
 - Gene raw data came from [Ensembl](https://www.ensembl.org/index.html), process by **extrat_genes_data.sh** and **Genes_data_processing.py** (**Genes_V3.py**)
 - TAD's raw data where from IMR90_Rao_2014's data (**TADs2.py**)
 
-In folder *train_script* there're the used script to train the classification models avaliable in the folder *models*.
+In folder *train_scripts* there're the used script to train the classification models avaliable in the folder *models*.
 
 ## References:
 - David, D., Freixo, J. P., Fino, J., Carvalho, I., Marques, M., Cardoso, M., Piña-Aguilar, R. E., & Morton, C. C. (2020). Comprehensive clinically oriented workflow for nucleotide level resolution and interpretation in prenatal diagnosis of de novo apparently balanced chromosomal translocations in their genomic landscape. Human Genetics, 139(4), 531–543. https://doi.org/10.1007/s00439-020-02121-x
