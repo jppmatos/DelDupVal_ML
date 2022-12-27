@@ -117,8 +117,8 @@ df_main["B_Lamina_score"].fillna(0, inplace=True)
 #Check if remains some missing data:
 if df_main.isnull().sum().sum() != 0:
 	check_for_cols_nans(df_main)
-    print("- Missing data was dropped!")
-    df_main = df_main.dropna()
+	print("- Missing data was dropped!")
+	df_main = df_main.dropna()
 
 ### Reptitive regions name, family and class by overlaping and/or closest distance:
 ### **Replace "no_overlap" with the data of the closest repRegions:**
