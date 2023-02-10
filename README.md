@@ -2,7 +2,7 @@
 DelDupVal_ML is a ML tool for validation of pos-mapping deletions and duplications copy number variations (CNVs) sequenced with large-insert genomic sequencing libraries that could been mislabeled as an actual CNV due to possible artifacts. 
 
 ## How it works?
-DDval_ML makes use of clusters of identified improper read-pairs to define a flanking region of the CNV it self (Figure 1), then genomic information is overlaped against the flacking regions of it is provided enough information to chracterize the CNV. 
+DelDupVal_ML makes use of clusters of identified improper read-pairs to define a flanking region of the CNV it self (Figure 1), then genomic information is overlaped against the flacking regions of it is provided enough information to chracterize the CNV. 
 
 ![image](https://user-images.githubusercontent.com/44948470/201972334-130a94aa-25a1-41cb-b4fc-18ff0cb761c8.png)
 ![image](https://user-images.githubusercontent.com/44948470/201972350-422dce3d-42d7-4fc3-96f1-1c73b04da057.png)
@@ -27,7 +27,7 @@ To characterize the genomic regions X and Y (refered as regions A and B in the e
 The models were trained with CNVs that were previously identified through improper pair clustering and coverage analysis (David et al., 2020), from large-insert libraries (Talkowski et al., 2011) sequencing data, using as reference the human genome version **GRCh38/hg38**. 
 
 ## How to run it
-1. Download DDval_ML repository
+1. Download DelDupVal_ML repository
 2. Download the [subdatasets](https://www.dropbox.com/s/lvbga9cnay5dwq5/dataset3.zip?dl=0) data
 3. Uncompress the dataset3.zip file, it has to be in the same diretory within the repository
 4. Select the bash script for the designed task, RUN_validate_DELS.sh for deletions or RUN_validate_DUPS.sh for duplications;
