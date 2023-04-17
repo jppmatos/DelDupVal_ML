@@ -1,5 +1,5 @@
 # DelDupVal_ML
-DelDupVal_ML is a ML tool for validation of pos-mapping deletions and duplications copy number variations (CNVs) sequenced with large-insert genomic sequencing libraries that could been mislabeled as an actual CNV due to possible artifacts. 
+DelDupVal_ML is a ML tool for validation of pos-mapping deletions and duplications, copy number variations (CNVs), sequenced with large-insert genomic sequencing libraries that could been mislabeled as an actual CNV due to possible artifacts. 
 
 ## How it works?
 DelDupVal_ML makes use of clusters of identified improper read-pairs to define a flanking region of the CNV it self (Figure 1), then genomic information is overlaped against the flacking regions of it is provided enough information to chracterize the CNV. 
