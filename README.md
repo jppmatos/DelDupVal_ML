@@ -56,7 +56,7 @@ CNV_ID;predicted_CNV
 ```
 
 ## Example:
-. Run RUN_validate_DELS.sh for deletions or RUN_validate_DUPS-DGRC0005.sh for duplications.
+. Run RUN_validate_DELS.sh for deletions or RUN_validate_DUPS.sh for duplications.
 ```
 #Deletions:
 sh RUN_validate_DELS.sh ./test_sample/deletions_SAMPLE.csv ./test_sample/
