@@ -104,6 +104,10 @@ Most of the genomic data used as features for the dataset came from [Genome Brow
 
 In folder *train_scripts* there're the used script to train the classification models avaliable in the folder *models*.
 
+### More documentation:
+This project was part of my Master Thesis (dissertation) at the Faculty of Sciences of the University of Lisbon (FCUL).
+The dissertation is available at: http://hdl.handle.net/10451/58954
+
 ## References:
 - David, D., Freixo, J. P., Fino, J., Carvalho, I., Marques, M., Cardoso, M., Piña-Aguilar, R. E., & Morton, C. C. (2020). Comprehensive clinically oriented workflow for nucleotide level resolution and interpretation in prenatal diagnosis of de novo apparently balanced chromosomal translocations in their genomic landscape. Human Genetics, 139(4), 531–543. https://doi.org/10.1007/s00439-020-02121-x
 - Dixon, J. R., Selvaraj, S., Yue, F., Kim, A., Li, Y., Shen, Y., Hu, M., Liu, J. S., & Ren, B. (2012). Topological Domains in Mammalian Genomes Identified by Analysis of Chromatin Interactions. Nature, 485(7398), 376. https://doi.org/10.1038/NATURE11082
